@@ -6,7 +6,7 @@ import numpy as np
 from torchvision import transforms
 import matplotlib.pyplot as plt
 
-#hi
+#hiffe
 class Mydataset(data.Dataset):
 # 类初始化
     def __init__(self, root):
