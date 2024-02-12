@@ -37,13 +37,9 @@ def load_data(path = None):
     #使用glob方法来获取数据图片的所有路径
     all_imgs_path = glob.glob(r'/home/lyc/doc/AML_LAB/dataset(png)/*/*.png')#数据文件夹路径，根据实际情况更改！
     
-    # #循环遍历输出列表中的每个元素，显示出每个图片的路径
-    # for var in all_imgs_path:
-    #     print("Image loaded:", var)
-    
     ### Prepare label 
     all_labels = []
-    #对所有图片路径进行迭代
+    # Create label base on path name
     for path_name in all_imgs_path:
         if "false" in path_name:
             all_labels.append(0)
@@ -51,18 +47,26 @@ def load_data(path = None):
             all_labels.append(1)
 
     signature_dataset = Mydatasetpro(all_imgs_path, label = all_labels)
-    print("A total of ", len(signature_dataset), "loaded.") #返回文件夹中图片总个数
+    
+
+
+    data.DataLoader(
+                            signature_dataset,
+                            batch_size=10,
+                            shuffle=True
+    )
+    return 
 
 def process_data():
 
+    return
 
 
-    
 
 
 def main():
     
-
+    return
 
 
 
